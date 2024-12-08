@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagram Kelas Sistem Pemantauan Cuaca</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <h1>Diagram Kelas Sistem Pemantauan Cuaca</h1>
+    <div class="mermaid">
+        classDiagram
+            class SistemPemantauanCuaca {
+              +ambilDataCuaca() : void
+              +buatLaporanCuaca() : Laporan
+            }
+
+            class StasiunCuaca {
+              +idStasiun : int
+              +lokasi : String
+              +getDataCuaca() : DataCuaca
+            }
+
+            class DataCuaca {
+              +suhu : float
+              +kelembaban : float
+              +tekananUdara : float
+            }
+
+            class Laporan {
+              +idLaporan : int
+              +tanggal : Date
+              +isiLaporan : String
+            }
+
+            class Pengguna {
+              +idPengguna : int
+              +nama : String
+              +mintaLaporan() : Laporan
+            }
+
+            SistemPemantauanCuaca --> StasiunCuaca : Ambil data
+            StasiunCuaca --> DataCuaca : Menghasilkan
+            SistemPemantauanCuaca --> Laporan : Membuat
+            Pengguna --> Laporan : Meminta
+    </div>
+</body>
+</html>

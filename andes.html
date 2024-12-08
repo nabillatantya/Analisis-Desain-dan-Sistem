@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence Diagram - Sistem Pemantauan Cuaca</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        .mermaid {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mermaid">
+    sequenceDiagram
+        participant Pengguna
+        participant "Sistem Pemantauan Cuaca" as Sistem
+        participant "Stasiun Cuaca" as Stasiun
+        participant "Ahli Meteorologi" as Ahli
+        
+        Pengguna->>Sistem: Request Laporan Cuaca
+        Sistem->>Stasiun: Memproses Data Cuaca
+        Stasiun->>Sistem: Mengirim Data Cuaca
+        Sistem->>Ahli: Mengirim Data ke Ahli Meteorologi
+        Ahli->>Sistem: Menganalisis Data
+        Sistem->>Pengguna: Menyediakan Laporan Cuaca
+</div>
+
+</body>
+</html>

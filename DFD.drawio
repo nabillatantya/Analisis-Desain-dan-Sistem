@@ -1,0 +1,398 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17" pages="9">
+  <diagram id="uMOFDmcIpZpgkOTkSJ3F" name="Kasus">
+    <mxGraphModel dx="862" dy="1510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="auYpCbONfnCRlGoN1Obv-2" value="Kasus :&#xa;Sebuah perusahaan teknologi sedang mengembangkan sistem pemantauan cuaca untuk mendapatkan informasi cuaca secara real-time dari berbagai stasiun cuaca yang tersebar di beberapa kota. Sistem ini memungkinkan pengguna (baik itu masyarakat umum, peneliti, atau lembaga pemerintah) untuk mengakses laporan cuaca yang dihasilkan dari data yang dikumpulkan oleh stasiun-stasiun cuaca.&#xa;&#xa;Deskripsi Sistem:&#xa;1. Stasiun Cuaca: Setiap stasiun cuaca dilengkapi dengan sensor yang mengumpulkan data cuaca seperti suhu, kelembaban, dan tekanan udara. Data ini dikirim secara otomatis ke Sistem Pemantauan Cuaca.&#xa;2. Sistem Pemantauan Cuaca: Sistem ini menerima data dari berbagai stasiun cuaca, memprosesnya, dan menyimpan data tersebut. Sistem juga mampu menghasilkan laporan cuaca harian yang tersedia untuk diakses oleh pengguna.&#xa;3. Pengguna: Pengguna sistem dapat mengakses laporan cuaca yang dihasilkan oleh sistem. Setiap pengguna harus memiliki akun untuk masuk ke sistem dan meminta laporan cuaca.&#xa;&#xa;&#xa;1. Buat DFD (Data Flow Diagram) Level 0 dan Level 1 untuk sistem pemantauan cuaca ini.&#xa;2. Buat ERD (Entity Relationship Diagram) untuk menggambarkan relasi antara entitas-entitas dalam sistem (seperti Stasiun Cuaca, Pengguna, Laporan, dan Data Cuaca).&#xa;3. Buat Diagram UML (Diagram Kelas, Diagram Sequence, Diagram Aktivitas, Diagram Use Case, Diagram State) untuk memodelkan struktur dan alur kerja dalam sistem pemantauan cuaca ini.&#xa;" style="text;whiteSpace=wrap;fontFamily=Times New Roman;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-760" width="680" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="auYpCbONfnCRlGoN1Obv-3" value="Nabilla Tantya Putri&lt;div&gt;12030123140353&lt;/div&gt;&lt;div&gt;Analisis Desain Sistem&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-860" width="130" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="DFD Level 0" id="-Xd3l4B10TfoTtHRyovj">
+    <mxGraphModel dx="1293" dy="615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pengguna" value="Pengguna" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="process" value="Sistem Pemantauan Cuaca" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="310" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dataStore" value="Database Cuaca" style="shape=partialRectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="140" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stasiun" value="Stasiun Cuaca" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" value="Permintaan Laporan" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="pengguna" target="process">
+          <mxGeometry x="0.0811" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow2" value="Laporan Cuaca" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="process" target="pengguna">
+          <mxGeometry x="0.2973" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow3" value="Data Cuaca" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="stasiun" target="process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" value="Simpan Data" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="process" target="dataStore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YygRkc5GoYBNa6096h1s-1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;DFD Level 0&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="68" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WtMOxN9Oi1Q_2HIrFbc8" name="DFD Level 1">
+    <mxGraphModel dx="1149" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pengguna" value="Pengguna" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="process1" value="P1 - Ambil Data Cuaca" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="200" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="process2" value="P2 - Buat Laporan Cuaca" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="330" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dataStore" value="Database Cuaca" style="shape=partialRectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stasiun" value="Stasiun Cuaca" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" value="Permintaan Laporan" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="pengguna" target="process2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" value="Data Cuaca" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="stasiun" target="process1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" value="Simpan Data" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="process1" target="dataStore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" value="Ambil Data" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="dataStore" target="process2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="flow5" value="Laporan Cuaca" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="process2" target="pengguna">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lFg66ry1BTCQb0iNL9w_-1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;DFD Level&amp;nbsp; 1&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="305" y="58" width="90" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="NHUHtFcnS7yU38MIMNO8" name="ERD ">
+    <mxGraphModel dx="1149" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pengguna" value="Pengguna" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="110" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sistem" value="Sistem Pemantauan Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="370" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="laporan" value="Laporan Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="250" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="stasiun" value="Stasiun Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="490" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="data" value="Data Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="540" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ahli" value="Ahli Meteorologi" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="250" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="media" value="Media" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="90" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="pengguna" target="laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="laporan" target="sistem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="sistem" target="data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="stasiun" target="data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="sistem" target="ahli">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="ahli" target="laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="media" target="laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lBQH7tJDC0Fz0ZH6UXAl-1" value="&lt;b&gt;Entity Relation Diafram (ERD)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="315" y="20" width="190" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dyI2Gd46CzAcoisMFO53" name="UML-Diagram Class">
+    <mxGraphModel dx="1149" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sistemPemantauan" value="SistemPemantauanCuaca" style="shape=swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="atributSistemPemantauan" value=" + ambilDataCuaca() : void&#xa;+ buatLaporanCuaca() : Laporan" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="sistemPemantauan">
+          <mxGeometry y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="stasiunCuaca" value="StasiunCuaca" style="shape=swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="400" width="225" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="atributStasiunCuaca" value=" + idStasiun : int&#xa;+ lokasi : String&#xa;+ getDataCuaca() : DataCuaca" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="stasiunCuaca">
+          <mxGeometry x="5" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dataCuaca" value="DataCuaca" style="shape=swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="410" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="atributDataCuaca" value=" + suhu : float&#xa;+ kelembaban : float&#xa;+ tekananUdara : float" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="dataCuaca">
+          <mxGeometry y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="laporan" value="Laporan" style="shape=swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="195" width="180" height="110" as="geometry">
+            <mxRectangle x="390" y="110" width="80" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="atributLaporan" value=" + idLaporan : int&#xa;+ tanggal : Date&#xa;+ isiLaporan : String" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="laporan">
+          <mxGeometry x="10" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pengguna" value="Pengguna" style="shape=swimlane;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="190" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="atributPengguna" value=" + idPengguna : int&#xa;+ nama : String&#xa;+ mintaLaporan() : Laporan" style="text;html=1;strokeColor=none;fillColor=none;" vertex="1" parent="pengguna">
+          <mxGeometry y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="asosiasi1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="sistemPemantauan" target="stasiunCuaca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="asosiasi2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="stasiunCuaca" target="dataCuaca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="asosiasi3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="sistemPemantauan" target="laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="asosiasi4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="pengguna" target="laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-3IjryMv78HPSGIDxXQQ-1" value="&lt;font style=&quot;font-size: 12px;&quot; face=&quot;Times New Roman&quot;&gt;&lt;b&gt;UML- Class Diagram&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="70" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="TWK-aDU5rZOAa-LOs90T" name="UML-Diagram Sequence">
+    <mxGraphModel dx="1034" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pengguna" value="Pengguna" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="180" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="stasiun" value="Stasiun Cuaca" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="440" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sistem" value="Sistem Pemantauan Cuaca" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="160" width="200" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="interaksi1" value="Meminta Laporan Cuaca" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="pengguna" target="sistem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="interaksi2" value="Mengirim Laporan Cuaca" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="sistem" target="pengguna">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="interaksi3" value="Mengirim Data Cuaca" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="stasiun" target="sistem">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="490" />
+              <mxPoint x="230" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="interaksi4" value="Memproses Data Cuaca" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="sistem" target="sistem">
+          <mxGeometry x="-0.3333" y="60" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="interaksi5" value="Membuat Laporan Cuaca" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;exitX=1;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.767;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="sistem" target="sistem">
+          <mxGeometry x="-0.2416" y="10" relative="1" as="geometry">
+            <mxPoint x="520" y="60" as="sourcePoint" />
+            <mxPoint x="540" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="200" />
+              <mxPoint x="750" y="200" />
+              <mxPoint x="750" y="390" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="interaksi6" value="Mengirimkan Laporan Cuaca ke Pengguna" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="sistem" target="pengguna">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBi2MOxT2eXVZSmCJfUW-1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;UML- Sequence Diagram&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="325" y="88" width="150" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="KfF86vDbTsu8_uhe4Wos" name="UML Diagram-Use Case">
+    <mxGraphModel dx="1379" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pengguna" value="Pengguna" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="140" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="stasiun" value="Stasiun Cuaca" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="media" value="Media" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="400" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ahli" value="Ahli Meteorologi" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="145" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lihatLaporan" value="Lihat Laporan Cuaca" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="265" y="190" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kirimData" value="Kirim Data Cuaca" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="300" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="analisisCuaca" value="Analisis Cuaca" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="190" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sebarLaporan" value="Sebarkan Laporan Cuaca" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="300" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="pengguna" target="lihatLaporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="stasiun" target="kirimData">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="ahli" target="analisisCuaca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="media" target="sebarLaporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jNKwUaVbHA95mpYCksaY-1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;UML- Use Case Diagram&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="335" y="68" width="150" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="5c2SB1EMyrsz3FN9a1g4" name="UML Diagram- Activity Diagram">
+    <mxGraphModel dx="1293" dy="615" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="Mulai" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="action1" value="Mengirim Permintaan Laporan Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="action2" value="Menerima Data dari Stasiun Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="240" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="action3" value="Memproses Data Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="340" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="action4" value="Membuat Laporan Cuaca" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="430" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="action5" value="Mengirim Laporan Cuaca ke Pengguna" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="530" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="Selesai" style="shape=ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="540" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="start" target="action1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="action1" target="action2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="action2" target="action3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="action3" target="action4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="action4" target="action5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="action5" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a79BhctJ29qT9mxhYJY3-2" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;UML- Activity Diagram&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="325" y="30" width="150" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="CHdfG8ntMToZMz8WG1oo" name="UML Diagram-State Diagram">
+    <mxGraphModel dx="1379" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="idle" value="Idle" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="190" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="waiting" value="Menunggu Data" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="250" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="processing" value="Memproses Data" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="reporting" value="Membuat Laporan" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="530" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sending" value="Mengirim Laporan" style="shape=rectangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="790" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="transition1" value="Menerima Data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="idle" target="waiting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="transition2" value="Mulai Memproses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="waiting" target="processing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="transition3" value="Selesai Memproses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="processing" target="reporting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="transition4" value="Membuat Laporan Selesai" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="reporting" target="sending">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="transition5" value="Laporan Terkirim" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;" edge="1" parent="1" source="sending" target="idle">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="76ZI1AveeiVPRTMQj3ff-1" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;b&gt;UML- State Diagram&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
